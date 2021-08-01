@@ -1,0 +1,41 @@
+<div class="container">
+    <mat-card class="card-size">
+        <form [formGroup]="usuarioForm" (ngSubmit)="save()">
+            <p>
+                <mat-form-field style="width: 100%">
+                    <mat-label>Nome</mat-label>
+                    <input type="text" matInput formControlName="nome">
+                    <mat-error>
+                        <app-validator-form [field]="usuarioForm.controls.nome"></app-validator-form>
+                    </mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field style="width: 100%;">
+                    <mat-label>E-mail</mat-label>
+                    <input type="email" matInput formControlName="email">
+                    <mat-error>
+                        <app-validator-form [field]="usuarioForm.controls.email"></app-validator-form>
+                    </mat-error>
+                </mat-form-field>               
+            </p>
+            <p>
+                <mat-form-field style="width: 50%;">
+                    <mat-label>Senha</mat-label>
+                    <input type="password" matInput formControlName="senha" (change)="applyValidation()">
+                    <mat-error>
+                        <app-validator-form [field]="usuarioForm.controls.senha"></app-validator-form>
+                    </mat-error>
+                </mat-form-field>
+            </p>
+            <p *ngIf="usuarioForm.controls.id.value">
+                <button mat-raised-button class="btn btn-success">Salvar</button>
+                <a mat-raised-button class="btn btn-danger" (click)="delete()">Excluir Conta</a>
+            </p>
+            <p *ngIf="!usuarioForm.controls.id.value">
+                <a mat-raised-button routerLink="/login" class="btn">Voltar</a>
+                <button mat-raised-button class="btn btn-success">Cadastrar</button>                
+            </p>
+        </form>
+    </mat-card>
+</div>

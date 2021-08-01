@@ -1,0 +1,49 @@
+/* You can add global styles to this file, and also import other style files */
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.notification-danger {
+    background: #b22222;
+    color: #ffffff;
+}
+
+.btn-success{
+    background-color: #3cb371;
+    color: #ffffff;
+}
+
+.btn-danger{
+    background-color: #b22222;
+    color: #ffffff;
+}
+
+.btn-primary {
+   background-color: #0088ff;
+   color: #ffffff;
+}
+
+.table {
+    width: 100%;
+}
+
+mat-form-field {
+    margin-right: 30px;
+}
+
+.table-commands-header > * {
+    float: right;
+}
+
+.table-commands > *{
+    margin-left: 5px !important;
+    float: right;
+}
+
+.form-header{
+    display: flex;
+}
+
+.form-header > a{
+   bottom: 3px;
+}

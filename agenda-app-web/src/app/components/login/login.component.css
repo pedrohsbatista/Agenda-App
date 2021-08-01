@@ -1,0 +1,24 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-size {
+    width: 300px;
+}
+
+.btn-full {
+    width: 100%;
+}
+
+.cadastro-row{
+    text-align: center;
+}
+
+.cadastro {
+    text-decoration: none;
+    font-size: medium;
+    color: #000000;    
+}

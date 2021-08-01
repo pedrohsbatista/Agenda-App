@@ -1,0 +1,14 @@
+.container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-size {
+    width: 500px;
+}
+
+.btn {
+    margin: 15px 5px 0 0;
+}

@@ -1,0 +1,30 @@
+<div class="container">
+    <mat-card class="card-size">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+            <p>
+                <mat-form-field style="width: 100%">
+                    <mat-label>E-mail</mat-label>
+                    <input type="email" matInput formControlName="email">
+                    <mat-error>
+                        <app-validator-form [field]="loginForm.controls.email"></app-validator-form>
+                    </mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <mat-form-field style="width: 100%">
+                    <mat-label>Senha</mat-label>
+                    <input type="password" matInput formControlName="senha">
+                    <mat-error>
+                        <app-validator-form [field]="loginForm.controls.senha"></app-validator-form>
+                    </mat-error>
+                </mat-form-field>
+            </p>
+            <p>
+                <button mat-raised-button class="btn-primary btn-full">Entrar</button>
+            </p>
+            <p class="cadastro-row">
+                <a routerLink="/usuarioForm" class="cadastro"><b>Cadastre-se</b></a>
+            </p>
+        </form>
+    </mat-card>
+</div>

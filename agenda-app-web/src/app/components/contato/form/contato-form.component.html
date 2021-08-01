@@ -1,0 +1,43 @@
+<div class="form-header">
+    <a mat-icon-button routerLink="/contato">
+        <mat-icon>keyboard_backspace</mat-icon>
+    </a>
+    <h2>Contato</h2>
+</div>
+<form [formGroup]="contatoForm" (ngSubmit)="save()">
+    <p>
+        <mat-form-field style="width: 50%">
+            <mat-label>Nome</mat-label>
+            <input type="text" matInput formControlName="nome">
+            <mat-error>
+                <app-validator-form [field]="contatoForm.controls.nome"></app-validator-form>
+            </mat-error>
+        </mat-form-field>
+    </p>
+    <p>
+        <mat-form-field style="width: 50%">
+            <mat-label>E-mail</mat-label>
+            <input type="email" matInput formControlName="email">
+            <mat-error>
+                <app-validator-form [field]="contatoForm.controls.email"></app-validator-form>
+            </mat-error>        
+        </mat-form-field>
+        <mat-form-field style="width: 15%">
+            <mat-label>Telefone</mat-label>
+            <input type="text" matInput formControlName="telefone" mask="(00) 0000-0000">
+            <mat-error>
+                <app-validator-form [field]="contatoForm.controls.telefone"></app-validator-form>
+            </mat-error>
+        </mat-form-field>
+        <mat-form-field style="width: 15%">
+            <mat-label>Celular</mat-label>
+            <input type="text" matInput formControlName="celular" mask="(00) 00000-0000">
+            <mat-error>
+                <app-validator-form [field]="contatoForm.controls.celular"></app-validator-form>
+            </mat-error>
+        </mat-form-field>
+    </p>
+    <p>
+        <button mat-raised-button class="btn-success">Salvar</button>
+    </p>
+</form>

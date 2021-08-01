@@ -1,0 +1,39 @@
+.toolbar{
+    background-color: #0088ff;
+    color:  #ffffff;
+}
+
+.toolbar-left {
+    width: 50%;
+    display: flex;
+}
+
+.toolbar-left > a:link {
+    text-decoration: none;
+}
+
+.toolbar-left > a {
+    font-size: medium;
+    margin-top: 3px;
+    color:  #ffffff;
+    margin-left: 10px;
+}
+
+.toolbar-right {
+    width: 50%;
+}
+
+.toolbar-right > * {
+    float: right;
+}
+
+.toolbar-right > button {
+    font-size: medium;
+    margin-top: 3px;
+    color:  #ffffff;
+    margin-left: 10px;
+}
+
+.conteudo {
+    height: calc(100vh);
+}
